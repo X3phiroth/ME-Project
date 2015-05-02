@@ -1,0 +1,163 @@
+@import url("reset.css");
+
+@font-face {
+  font-family: "Satisfy";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Satisfy"), url("http://fonts.gstatic.com/s/satisfy/v6/2OzALGYfHwQjkPYWELy-cw.woff2")
+      format("woff2"), url("http://fonts.gstatic.com/s/satisfy/v6/ch7X2unYkww0EzsjlC3m8w.woff")
+      format("woff");
+}
+
+body {
+    background-image: url("../images/background.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: helvetica, arial, sans-serif;
+}
+
+header {
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 42px;
+    background-color: #9DBE2F;
+    border-bottom: 1px solid black;
+    position: fixed;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+       -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+            box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+}
+
+#head {
+    width: 980px;
+    height: 42px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#search {
+    text-align: right;
+    padding-top: 5px;
+}
+
+#menu {
+    width: 250px;
+    height: 600px;
+    position: absolute;
+    background-color: rgba(183, 198, 45, 0.65);
+    top: 55px;
+    right: 10px;
+
+}
+
+main {
+    z-index: 0;
+    width: 980px;
+    position: relative;
+    min-height: 200px;
+    /*height: 5000px;*/
+    margin: 0 auto;
+    padding: 43px 0 86px 0;
+    background-color: #EDEF9E;
+    border-width: 0 1px;
+    border-style: solid;
+    border-width: 1px;
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+       -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+}
+
+#content {
+    width: 700px;
+    margin: 50px 0 0 10px; 
+}
+
+footer {
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #9DBE2F;
+    border-top: 1px solid black;
+    position: fixed;
+    -webkit-box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.75);
+       -moz-box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.75);
+            box-shadow: 0px -1px 3px 0px rgba(0,0,0,0.75);
+}
+
+#gradient-top {
+    position: fixed;
+    top: 42px;
+    margin: 0 auto;
+    height:100px;
+    width:980px;
+    background: -moz-linear-gradient(top, rgba(237,239,158,1) 10%, rgba(137,255,241,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(100%,rgba(237,239,158,0.1), color-stop(50%,rgba(137,255,241,1.0)))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(237,239,158,1) 10%, rgba(137,255,241,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(237,239,158,1) 10%, rgba(137,255,241,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(237,239,158,1) 10%, rgba(137,255,241,0) 100%); /* IE10+ */
+}
+#gradient-bot {
+    position: fixed;
+    bottom: 30px;
+    margin: 0 auto;
+    height:100px;
+    width:980px;
+    background: -moz-linear-gradient(top, rgba(137,255,241,0) 0%, rgba(237,239,158,1) 90%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(137,255,241,0)), color-stop(100%,rgba(237,239,158,0.9))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(137,255,241,0) 0%, rgba(237,239,158,1) 90%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(137,255,241,0) 0%, rgba(237,239,158,1) 90%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(137,255,241,0) 0%, rgba(237,239,158,1) 90%); /* IE10+ */
+}
+
+/* Normal elements */
+p {
+    margin: 1em 0;
+    color: #2c2c2c;
+}
+
+/* -----------------------------Just testing-------------------------------- */
+
+#tftextinput{
+    margin: 0;
+    padding: 5px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:14px;
+    border:1px solid #0076a3; border-right:0px;
+    border-top-left-radius: 5px 5px;
+    border-bottom-left-radius: 5px 5px;
+}
+
+#tfbutton {
+    margin: 0;
+    padding: 5px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:14px;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    border: solid 1px #0076a3; border-right:0px;
+    background: #0095cd;
+    background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+    background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+    border-top-right-radius: 5px 5px;
+    border-bottom-right-radius: 5px 5px;
+}
+.tfbutton:hover {
+    text-decoration: none;
+    background: #007ead;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+    /*-moz-linear-gradient(center top , #fabc63, #f28f01) repeat scroll 0% 0% transparent*/
+    background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+}
+/* Fixes submit button height problem in Firefox */
+.tfbutton::-moz-focus-inner {
+    border: 0;
+}
+.tfclear{
+    clear:both;
+}
