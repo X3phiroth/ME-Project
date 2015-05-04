@@ -19,7 +19,7 @@
                         <li><a href="restaurants.html">Show all</a></li>
                         <li><a href="#nogo">Link 2</a></li>
                         <li><a href="#nogo">Link 3</a></li>
-                        <li><a href="new-restaurant.html">Add new restaurant</a></li>
+                        <li><a href="#nogo">Add new restaurant</a></li>
                         <li><a href="#nogo">SignIn / LogIn</a></li>
                     </ul>
                 </nav>
@@ -48,26 +48,29 @@
         <main>
             <div id="content">
                 <img src="images/banner.png" style="width: 100%" alt="Banner">
-                <table id="liste">
-                    <tr>
-                        <th>Name</th>
-                        <th>Adress</th>
-                        <th>Style</th>
-                        <th>Rating</th>
-                    </tr>
-                    <tr>
-                        <td><a href="restaurant-xy.html">Fantasy Inn</a></td>
-                        <td>Mordor-Avenue 3, 66666, Narnia</td>
-                        <td>italian</td>
-                        <td>5/5</td>
-                    </tr>
-                    <tr>
-                        <td><a href="#nogo">Right at the corner</a></td>
-                        <td>my-or-your street 4, 12345, Largos</td>
-                        <td>indian</td>
-                        <td>3/5</td>
-                    </tr>
-                </table>
+                <form id="create">
+                    <table>
+                        <tr>
+                            <td>name of the restaurant:</td>
+                            <td><input type="text" name="name" size="25" maxlength="30" required></td>
+                        </tr><tr>
+                            <td>adress:</td>
+                            <td><input type="text" name="name" size="25" maxlength="30" required></td>
+                        </tr><tr>
+                            <td>zip code:</td>
+                            <td><input type="text" name="zip" size="25" maxlength="5" required></td>
+                        </tr><tr>
+                            <td>country:</td>
+                            <td><input type="text" name="country" size="25" maxlength="30" required></td>
+                        </tr><tr>
+                            <td>style:</td>
+                            <td><input type="text" name="country" size="25" maxlength="30" required></td>
+                        </tr><tr>
+                            <td><input class="buttons" type="submit" value="Submit"></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </form>
             </div>
             <div id="gradient-top"></div>
             <div id="gradient-bot"></div>
