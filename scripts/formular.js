@@ -3,13 +3,13 @@ function checkFormular() {
     var info = "";
     
     if (document.getElementById("create").name.value.length < 4) {
-        info += "name must contain at least 4 characters\n";
+        info += "name must contain at least 4 characters\n\n";
         document.getElementById("create").name.focus();
         bol = false;
     }
     
     if (document.getElementById("create").adress.value.length < 5) {
-        info += "adress must contain at least 5 characters\n";
+        info += "adress must contain at least 5 characters\n\n";
         document.getElementById("create").adress.focus();
         bol = false;
     }
@@ -22,9 +22,10 @@ function checkFormular() {
         }
     }
     if (check === 1) {
-        alert("Only numbers for zip code allowed");
+        info += "Only numbers for zip code allowed\n\n";
         document.getElementById("create").zip.focus();
         bol = false;
     }
+    alert(info);
     return bol;
 }
