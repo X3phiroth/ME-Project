@@ -26,6 +26,17 @@ function checkFormular() {
         document.getElementById("create").zip.focus();
         bol = false;
     }
-    alert(info);
+    
+    if (document.getElementById("create").land.selectedIndex === 0){
+        info += "Choose a country\n\n";
+    }
+    
+    if (document.getElementById("create").cuisine.selectedIndex === 0){
+        info += "Choose a cuisine\n\n";
+    }
+    
+    if (info.length !== 0) {
+        alert(info);
+    }
     return bol;
 }
