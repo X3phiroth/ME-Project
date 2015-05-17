@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="images/favicon.ico" type="image/icon">
         <link rel="stylesheet" href="css/our.css">
+        <script src="scripts/formular.js"></script>
     </head>
     <body>
         <header>
@@ -48,23 +49,48 @@
         <main>
             <div id="content">
                 <img src="images/banner.png" style="width: 100%" alt="Banner">
-                <form id="create">
+                <form id="create" onsubmit="return checkFormular()">
                     <table>
                         <tr>
                             <td>name of the restaurant:</td>
-                            <td><input type="text" name="name" size="25" maxlength="30" required value="Fantasy Inn"></td>
+                            <td><input type="text" name="name" size="25" maxlength="30" value="Fantasy Inn" required ></td>
                         </tr><tr>
                             <td>adress:</td>
-                            <td><input type="text" name="name" size="25" maxlength="30" required value="Mordor-Avenue 3"></td>
+                            <td><input type="text" name="adress" size="25" maxlength="30" value="Mordor-Avenue 3" required></td>
                         </tr><tr>
                             <td>zip code:</td>
-                            <td><input type="text" name="zip" size="25" maxlength="5" required value="66666"></td>
+                            <td><input type="text" name="zip" size="25" maxlength="5" value="66666" required></td>
                         </tr><tr>
                             <td>country:</td>
-                            <td><input type="text" name="country" size="25" maxlength="30" required value="Narnia"></td>
+                            <td>                                
+                                <select class="select" name="land" size="1" >
+                                    <option value="zero"></option>
+                                    <option value="at">Austria</option>
+                                    <option value="en">England</option>
+                                    <option value="fr">France</option>
+                                    <option value="de">Germany</option>
+                                    <option value="it">Italy</option>
+                                    <option value="ne" selected>Netherlands</option>
+                                    <option value="es">Spain</option>
+                                    <option value="sw">Switzerland</option>
+                                </select><br />    
+                            </td>
                         </tr><tr>
-                            <td>style:</td>
-                            <td><input type="text" name="country" size="25" maxlength="30" required value="italian"></td>
+                            <td>cuisine:</td>
+                            <td>  <select class ="select" name="cuisine" size="1">
+                                    <option value="zero"></option>
+                                    <option value="ame">American</option>
+                                    <option value="chi">Chinese</option>
+                                    <option value="eng">English</option>
+                                    <option value="fra">French</option>
+                                    <option value="gre">Greek</option>
+                                    <option value="ind">Indian</option>
+                                    <option value="ita" selected>Italian</option>
+                                    <option value="jap">Japanese</option>
+                                    <option value="mex">Mexican</option>
+                                    <option value="rus">Russian</option>
+                                    <option value="spa">Spanish</option>
+                                </select><br />  
                         </tr><tr>
                             <td><input class="buttons" type="submit" value="Submit"><input class="buttons" type="submit" value="Delete"></td>
                             <td></td>

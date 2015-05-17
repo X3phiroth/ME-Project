@@ -29,10 +29,12 @@ function checkFormular() {
     
     if (document.getElementById("create").land.selectedIndex === 0){
         info += "Choose a country\n\n";
+        bol = false;
     }
     
     if (document.getElementById("create").cuisine.selectedIndex === 0){
         info += "Choose a cuisine\n\n";
+        bol = false;
     }
     
     if (info.length !== 0) {
