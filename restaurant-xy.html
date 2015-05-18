@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="images/favicon.ico" type="image/icon">
         <link rel="stylesheet" href="css/our.css">
+        <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <script src="scripts/showMap.js"></script>
     </head>
     <body>
         <header>
@@ -50,24 +52,26 @@
                 <img src="images/banner.png" style="width: 100%" alt="Banner">
                 <table>
                     <tr>
-                <td>
-                    <h3>Fantasy Inn</h3>
-                    <p>Mordor-Avenue 3, 66666, Narnia</p>
-                    <p>italian</p>
-                    <p><img src="images/stars.jpg"></p>
-                    <form action="restaurant-xy-edit.html">
-                        <input class="buttons" type="submit" value="Update">
-                    </form>
-                </td>
-                <td>
-                    <img class="food" src="images/restaurant-map.png">
-                    <img class="food" src="images/pizza.jpg">
-                </td>
+                        <td>
+                            <h3>Fantasy Inn</h3>
+                            <p>Mordor-Avenue 3, 66666, Narnia</p>
+                            <p>italian</p>
+                            <p><img src="images/stars.jpg"></p>
+                            <form action="restaurant-xy-edit.html">
+                                <input class="buttons" type="submit" value="Update">
+                            </form>
+                        </td>
+                        <td>
+                            <img class="food" src="images/restaurant-map.png" onclick="displayMap()">
+                            <img class="food" src="images/pizza.jpg">
+                        </td>
                     </tr>
                 </table>
             </div>
             <div id="gradient-top"></div>
             <div id="gradient-bot"></div>
+            <div id="map" style=" width: 400px; height: 400px; position: fixed; 
+                 top: 100px; left: 0; right: 0; margin: 0 auto; display: none; z-index: 3; background-color: red;"></div>
         </main>
         <footer>
             <div id="foot">
