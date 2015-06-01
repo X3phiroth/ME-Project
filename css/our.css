@@ -133,6 +133,10 @@ main {
     border-radius: 10px;
 }
 
+#wechselndesbild {
+    text-align: center;
+}
+
 table {
     margin-top: 20px;
 }
