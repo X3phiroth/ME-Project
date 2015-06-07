@@ -169,6 +169,7 @@ table td {
 
 .buttons {
     margin-right: 15px;
+    margin-top: 30px;
     background: #9DBE2F;
     background-image: -webkit-linear-gradient(top, #9DBE2F, #7D962A);
     background-image: -moz-linear-gradient(top, #9DBE2F, #7D962A);

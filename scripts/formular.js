@@ -1,4 +1,7 @@
-// check all
+/**
+ * 
+ * @returns {Boolean}
+ */
 function checkFormular() {
     var bol1 = nameIsCorrect();
     var bol2 = adressIsCorrect();
@@ -15,7 +18,7 @@ var grey = "#989898";
 
 /**
  * 
- * @returns {none}
+ * @returns {None}
  */
 function nameCheck() {
     var inputField = document.getElementById("create").name;
@@ -29,7 +32,7 @@ function nameCheck() {
 }
 /**
  * 
- * @returns {boolean}
+ * @returns {Boolean}
  */
 function nameIsCorrect() {
     var inputField = document.getElementById("create").name;
@@ -46,7 +49,7 @@ function nameIsCorrect() {
 
 /**
  * 
- * @returns {none}
+ * @returns {None}
  */
 function adressCheck() {
     var inputField = document.getElementById("create").adress;
@@ -60,7 +63,7 @@ function adressCheck() {
 }
 /**
  * 
- * @returns {boolean}
+ * @returns {Boolean}
  */
 function adressIsCorrect() {
     var inputField = document.getElementById("create").adress;
@@ -77,7 +80,7 @@ function adressIsCorrect() {
 
 /**
  * 
- * @returns {none}
+ * @returns {None}
  */
 function zipCheck() {
     var inputField = document.getElementById("create").zip;
@@ -100,7 +103,7 @@ function zipCheck() {
 }
 /**
  * 
- * @returns {boolean}
+ * @returns {Boolean}
  */
 function zipIsCorrect() {
     var inputField = document.getElementById("create").zip;
@@ -126,7 +129,7 @@ function zipIsCorrect() {
 
 /**
  * 
- * @returns {none}
+ * @returns {None}
  */
 function landCheck() {
     var inputField = document.getElementById("create").land;
@@ -140,7 +143,7 @@ function landCheck() {
 }
 /**
  * 
- * @returns {boolean}
+ * @returns {Boolean}
  */
 function landIsCorrect() {
     var inputField = document.getElementById("create").land;
@@ -157,7 +160,7 @@ function landIsCorrect() {
 
 /**
  * 
- * @returns {none}
+ * @returns {None}
  */
 function cuisineCheck() {
     var inputField = document.getElementById("create").cuisine;
@@ -171,7 +174,7 @@ function cuisineCheck() {
 }
 /**
  * 
- * @returns {boolean}
+ * @returns {Boolean}
  */
 function cuisineIsCorrect() {
     var inputField = document.getElementById("create").cuisine;
@@ -188,12 +191,12 @@ function cuisineIsCorrect() {
 
 /**
  * 
- * @param {inputField} element
- * @param {type} c_border
- * @param {type} text
- * @param {type} c_text
- * @param {type} string
- * @returns {none}
+ * @param {HTMLElement} element
+ * @param {ColorAsString} c_border
+ * @param {HTMLElement} text
+ * @param {ColorAsString} c_text
+ * @param {String} string
+ * @returns {None}
  */
 function setProps(element, c_border, text, c_text, string) {
     element.style.borderColor = c_border;
