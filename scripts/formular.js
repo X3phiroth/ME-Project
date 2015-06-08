@@ -1,8 +1,39 @@
 /**
+ * Adding all Event Listeners
  * 
+ * @returns {None}
+ */
+window.onload = function() {
+        document.getElementById('create').name.addEventListener('focus', nameCheck);
+        document.getElementById('create').name.addEventListener('input', nameCheck);
+        document.getElementById('create').name.addEventListener('blur', nameIsCorrect);
+        
+        document.getElementById('create').adress.addEventListener('focus', adressCheck);
+        document.getElementById('create').adress.addEventListener('input', adressCheck);
+        document.getElementById('create').adress.addEventListener('blur', adressIsCorrect);
+        
+        document.getElementById('create').zip.addEventListener('focus', zipCheck);
+        document.getElementById('create').zip.addEventListener('input', zipCheck);
+        document.getElementById('create').zip.addEventListener('blur', zipIsCorrect);
+        
+        document.getElementById('create').land.addEventListener('focus', landCheck);
+        document.getElementById('create').land.addEventListener('change', landCheck);
+        document.getElementById('create').land.addEventListener('blur', landIsCorrect);
+        
+        document.getElementById('create').cuisine.addEventListener('focus', cuisineCheck);
+        document.getElementById('create').cuisine.addEventListener('change', cuisineCheck);
+        document.getElementById('create').cuisine.addEventListener('blur', cuisineIsCorrect);
+        
+        document.getElementById('create').addEventListener("submit", function(event) {checkFormular(event);});
+};
+
+/**
+ * 
+ * @param {type} event
  * @returns {Boolean}
  */
-function checkFormular() {
+function checkFormular(event) {
+    event.preventDefault();
     var bol1 = nameIsCorrect();
     var bol2 = adressIsCorrect();
     var bol3 = zipIsCorrect();
