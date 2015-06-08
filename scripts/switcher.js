@@ -2,7 +2,7 @@ var zahl = 1;
 
 function bildwechsel_starten()
 {
-    bildwechselthread = setInterval("bildwechsel()", 1000);
+    bildwechselthread = setInterval("bildwechsel()", 3000);
     
 }
 function bildwechsel()

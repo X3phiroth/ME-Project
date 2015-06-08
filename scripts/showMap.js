@@ -20,10 +20,12 @@ function start() {
     }, function () {
     });
 }
-google.maps.event.addDomListener(window, 'load', start);
+//google.maps.event.addDomListener(window, 'load', start);
 
 
 function displayMap() {
+//    document.getElementById("gnar").style.display = "block";
     document.getElementById("map").style.display = "block";
+    start();
     
 }

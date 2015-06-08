@@ -10,6 +10,7 @@
         <script src="scripts/showMap.js"></script>
     </head>
     <body>
+        <div id="gnar" style="position: fixed; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 2; display: none;"></div>
         <header>
             <div id="head">
                 <a href="index.html"><h1>Gluten free restaurants</h1></a>
@@ -56,22 +57,21 @@
                             <h3>Fantasy Inn</h3>
                             <p>Mordor-Avenue 3, 66666, Narnia</p>
                             <p>italian</p>
-                            <p><img src="images/stars.jpg"></p>
+                            <p><img src="images/stars.jpg" alt="rating"></p>
                             <form action="restaurant-xy-edit.html">
                                 <input class="buttons" type="submit" value="Update">
                             </form>
                         </td>
                         <td>
-                            <img class="food" src="images/restaurant-map.png" onclick="displayMap()">
-                            <img class="food" src="images/pizza.jpg">
+                            <img class="food" src="images/restaurant-map.png" onclick="displayMap()" alt="map preview">
+                            <img class="food" src="images/pizza.jpg" alt="restaurant picture">
                         </td>
                     </tr>
                 </table>
             </div>
             <div id="gradient-top"></div>
             <div id="gradient-bot"></div>
-            <div id="map" style=" width: 400px; height: 400px; position: fixed; 
-                 top: 100px; left: 0; right: 0; margin: 0 auto; display: none; z-index: 3; background-color: red;"></div>
+            <div id="map" style=" width: 400px; height: 400px; position: fixed; top: -500px; left: 0; right: 0; margin: 0 auto; display: none; z-index: 3;"></div>
         </main>
         <footer>
             <div id="foot">
