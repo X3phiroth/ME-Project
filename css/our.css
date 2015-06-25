@@ -1,4 +1,6 @@
 @import url("reset.css");
+@import url("http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css");
+@import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
 
 @font-face {
     font-family: "Satisfy";
@@ -353,7 +355,7 @@ h4{
     clear:both;
 }
 
-// social media
+///////// social media buttons ///////////////
 
 ul.social-network {
 	list-style: none;
@@ -431,8 +433,6 @@ a.socialIcon:hover, .socialHoverClass {
 	-ms-transition: all 0.8s;
 	transition: all 0.8s;
 }
-a {
+social-network social-circle a {
  background-color: #D3D3D3;   
 }
-
-

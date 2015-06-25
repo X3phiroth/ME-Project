@@ -6,6 +6,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="images/favicon.ico" type="image/icon">
         <link rel="stylesheet" href="css/our.css">
+
+        <script type="text/javascript" src="/path/to/jquery-latest.js"></script> 
+        <script type="text/javascript" src="/path/to/jquery.tablesorter.js"></script> 
+        <script>$(document).ready(function ()
+            {
+                $("#myTable").tablesorter({sortList: [[0,0], [1,0]]});
+            }
+            );
+        </script>
     </head>
     <body>
         <header>
@@ -48,13 +57,16 @@
         <main>
             <div id="content">
                 <img src="images/banner.png" style="width: 100%" alt="Banner">
-                <table id="liste">
+                <table id="myTable" class="tablesorter">
+                    <tablehead>
                     <tr>
                         <th>Name</th>
                         <th>Adress</th>
                         <th>Style</th>
                         <th>Rating</th>
                     </tr>
+                    </tablehead>
+                    <tbody>
                     <tr>
                         <td><a href="restaurant-xy.html">Fantasy Inn</a></td>
                         <td>Mordor-Avenue 3, 66666, Netherlands</td>
@@ -67,6 +79,7 @@
                         <td>indian</td>
                         <td>3/5</td>
                     </tr>
+                    </tbody>
                 </table>
             </div>
             <div id="gradient-top"></div>
