@@ -16,7 +16,11 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>
             $(document).ready(function () {
+                $(".text1").toggle();
                 $("#showMore").click(function () {
+                    var $this = $(this);
+                    $this.text($this.text() === "Show Less" ? "Show More" : "Show Less");
+                   // $(this).text("Show Less");
                     $(".text1").toggle();
                 });
             });
@@ -119,7 +123,9 @@
                     malesuada fames ac turpis egestas. Vestibulum tortor quam, 
                     feugiat vitae, ultricies eget, tempor sit amet, ante.
                 </p>
-                <button class="buttons" id="showMore" style="alignment-adjust: auto">Show More</button>
+                <div style="text-align: center">
+                    <button class="buttons" id="showMore">Show More</button>
+                </div>
                 <p class="text1">Donec eulibero sit amet quam egestas semper. Aenean ultricies mi vitae 
                     est. Mauris placerat eleifend leo. Quisque sit amet est et 
                     sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum 

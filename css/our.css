@@ -158,10 +158,10 @@ table p {
     text-align: left;   
 }
 
-table td {
+/*table td {
     padding: 10px;
     vertical-align: middle;
-}
+}*/
 
 .food {
     width: 250px;
@@ -260,7 +260,8 @@ p {
 }
 
 h1 {
-    padding: 5px 0 0 200px;
+    margin-top: 15px;
+    margin-left: 5px;
     font-family: Satisfy;
     display: inline-flex;
     font-size: 1.7em;
