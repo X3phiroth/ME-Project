@@ -1,3 +1,7 @@
+/*
+ * Complete Code in jQuery
+ */
+
 /**
  * Adding all Event Listeners
  * 
@@ -17,15 +21,31 @@ window.onload = function() {
         document.getElementById('create').zip.addEventListener('blur', zipIsCorrect);
         
         document.getElementById('create').land.addEventListener('focus', landCheck);
-        document.getElementById('create').land.addEventListener('change', landCheck);
+        document.getElementById('create').land.addEventListener('keypress', landCheck);
         document.getElementById('create').land.addEventListener('blur', landIsCorrect);
         
         document.getElementById('create').cuisine.addEventListener('focus', cuisineCheck);
-        document.getElementById('create').cuisine.addEventListener('change', cuisineCheck);
+        document.getElementById('create').cuisine.addEventListener('keypress', cuisineCheck);
         document.getElementById('create').cuisine.addEventListener('blur', cuisineIsCorrect);
         
         document.getElementById('create').addEventListener("submit", function(event) {checkFormular(event);});
 };
+
+//$(document).ready(function() {
+//    $("#create [name]").on({input: nameCheck, focusin: nameCheck, focusout: nameIsCorrect});
+//    $("#create [adress]").on({input: nameCheck, focusin: nameCheck, focusout: nameIsCorrect});
+//    $("#create [zip]").on({input: nameCheck, focusin: nameCheck, focusout: nameIsCorrect});
+//    $("#create [land]").on({input: nameCheck, focusin: nameCheck, focusout: nameIsCorrect});
+//    $("#create [cuisine]").on({input: nameCheck, focusin: nameCheck, focusout: nameIsCorrect});
+//    $("#create").on("submit", function(event) {checkFormular(event);});
+//    
+//   $("#create [name]").on("input", nameCheck).on("focus", nameCheck).on("blur", nameIsCorrect);
+//   $("#create [adress]").on("input", nameCheck).on("focus", nameCheck).on("blur", nameIsCorrect);
+//   $("#create [zip]").on("input", nameCheck).on("focus", nameCheck).on("blur", nameIsCorrect);
+//   $("#create [land]").on("input", nameCheck).on("focus", nameCheck).on("blur", nameIsCorrect);
+//   $("#create [cuisine]").on("input", nameCheck).on("focus", nameCheck).on("blur", nameIsCorrect);
+//   $("#create").on("submit", function(event) {checkFormular(event);});
+//});
 
 /**
  * 
@@ -52,8 +72,8 @@ var grey = "#989898";
  * @returns {None}
  */
 function nameCheck() {
-    var inputField = document.getElementById("create").name;
-    var textField = document.getElementById("form_1");
+    var inputField = $("#create [name]")[0];
+    var textField = $("#form_1")[0];
 
     if (inputField.value.length < 4) {
         setProps(inputField, orange, textField, grey, "*requires at least 4 characters");
@@ -66,8 +86,8 @@ function nameCheck() {
  * @returns {Boolean}
  */
 function nameIsCorrect() {
-    var inputField = document.getElementById("create").name;
-    var textField = document.getElementById("form_1");
+    var inputField = $("#create [name]")[0];
+    var textField = $("#form_1")[0];
     
     if (inputField.value.length < 4) {
         setProps(inputField, red, textField, red, "Must contain at least 4 characters!");
@@ -83,8 +103,8 @@ function nameIsCorrect() {
  * @returns {None}
  */
 function adressCheck() {
-    var inputField = document.getElementById("create").adress;
-    var textField = document.getElementById("form_2");
+    var inputField = $("#create [adress]")[0];
+    var textField = $("#form_2")[0];
 
     if (inputField.value.length < 5) {
         setProps(inputField, orange, textField, grey, "*requires at least 5 characters");
@@ -97,8 +117,8 @@ function adressCheck() {
  * @returns {Boolean}
  */
 function adressIsCorrect() {
-    var inputField = document.getElementById("create").adress;
-    var textField = document.getElementById("form_2");
+    var inputField = $("#create [adress]")[0];
+    var textField = $("#form_2")[0];
 
     if (inputField.value.length < 5) {
         setProps(inputField, red, textField, red, "Must contain at least 5 characters!");
