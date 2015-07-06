@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="images/favicon.ico" type="image/icon">
         <link rel="stylesheet" href="css/our.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="scripts/formular.js"></script>
     </head>
     <body>
@@ -42,14 +43,21 @@
                         <li><a href="">Meena Kumari</a></li>
                         <li><a href="">St. Hubertus</a></li>
                     </ul>
-                    <img src="images/button2.png" alt="Button" style="width: 85%; margin: 20px">
+                    <img src="images/button2.png" alt="Button" style="width: 70%; margin: 15px 0px 5px 40px ">
+                    <div class="col-md-12">
+                        <ul class="social-network social-circle">
+                            <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>				
+                    </div>
                 </nav>
             </div>
         </header>
         <main>
             <div id="content">
                 <img src="images/banner.png" style="width: 100%" alt="Banner">
-                <form id="create" onsubmit="return checkFormular()">
+                <form id="create">
                     <table style="width: 100%">
                         <colgroup>
                             <col style="width: 35%">
@@ -58,20 +66,20 @@
                         </colgroup>
                         <tr>
                             <td>name of the restaurant:</td>
-                            <td><input type="text" name="name" size="25" maxlength="30" onfocus="nameCheck()" oninput="nameCheck()" onblur="nameIsCorrect()"></td>
+                            <td><input type="text" name="name" size="25" maxlength="30"></td>
                             <td id="form_1"></td>
                         </tr><tr>
                             <td>adress:</td>
-                            <td><input type="text" name="adress" size="25" maxlength="30" onfocus="adressCheck()" oninput="adressCheck()" onblur="adressIsCorrect()"></td>
+                            <td><input type="text" name="adress" size="25" maxlength="30"></td>
                             <td id="form_2"></td>
                         </tr><tr>
                             <td>zip code:</td>
-                            <td><input type="text" name="zip" size="25" maxlength="5" onfocus="zipCheck()" oninput="zipCheck()" onblur="zipIsCorrect()"></td>
+                            <td><input type="text" name="zip" size="25" maxlength="5"></td>
                             <td id="form_3"></td>
                         </tr><tr>
                             <td>country:</td>
                             <td>                                
-                                <select name="land" size="1" onfocus="landCheck()" onchange="landCheck()" onblur="landIsCorrect()">
+                                <select name="land" size="1">
                                     <option value="zero"></option>
                                     <option value="at">Austria</option>
                                     <option value="en">England</option>
@@ -86,7 +94,7 @@
                             <td id="form_4"></td>
                         </tr><tr>
                             <td>cuisine:</td>
-                            <td><select name="cuisine" size="1" onfocus="cuisineCheck()" onchange="cuisineCheck()" onblur="cuisineIsCorrect()">
+                            <td><select name="cuisine" size="1">
                                     <option value="zero"></option>
                                     <option value="ame">American</option>
                                     <option value="chi">Chinese</option>

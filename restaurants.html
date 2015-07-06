@@ -6,6 +6,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="images/favicon.ico" type="image/icon">
         <link rel="stylesheet" href="css/our.css">
+
+        <script src="/path/to/jquery.js"></script>
+        <script src="/path/to/store.js"></script>
+        <script src="/path/to/jquery.resizableColumns.js"></script>
+        <script>
+            $(function () {
+                $("demo-table").resizableColumns();
+            });
+        </script>
     </head>
     <body>
         <header>
@@ -41,32 +50,43 @@
                         <li><a href="">Meena Kumari</a></li>
                         <li><a href="">St. Hubertus</a></li>
                     </ul>
-                    <img src="images/button2.png" alt="Button" style="width: 85%; margin: 20px">
+                    <img src="images/button2.png" alt="Button" style="width: 70%; margin: 15px 0px 5px 40px ">
+                    <div class="col-md-12">
+                        <ul class="social-network social-circle">
+                            <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>				
+                    </div>
                 </nav>
             </div>
         </header>
         <main>
             <div id="content">
                 <img src="images/banner.png" style="width: 100%" alt="Banner">
-                <table id="liste">
-                    <tr>
-                        <th>Name</th>
-                        <th>Adress</th>
-                        <th>Style</th>
-                        <th>Rating</th>
-                    </tr>
-                    <tr>
-                        <td><a href="restaurant-xy.html">Fantasy Inn</a></td>
-                        <td>Mordor-Avenue 3, 66666, Netherlands</td>
-                        <td>italian</td>
-                        <td>5/5</td>
-                    </tr>
-                    <tr>
-                        <td><a href="#nogo">Right at the corner</a></td>
-                        <td>my-or-your street 4, 12345, Largos</td>
-                        <td>indian</td>
-                        <td>3/5</td>
-                    </tr>
+                <table class="table table-bordered" data-resizable-columns-id="demo-table">
+                    <thead>
+                        <tr>
+                            <th data-resizable-column-id="name">Name</th>
+                            <th data-resizable-column-id="adresse">Adress</th>
+                            <th data-resizable-column-id="style">Style</th>
+                            <th data-resizable-column-id="#">Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="restaurant-xy.html">Fantasy Inn</a></td>
+                            <td>Mordor-Avenue 3, 66666, Netherlands</td>
+                            <td>italian</td>
+                            <td>5/5</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#nogo">Right at the corner</a></td>
+                            <td>my-or-your street 4, 12345, Largos</td>
+                            <td>indian</td>
+                            <td>3/5</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
             <div id="gradient-top"></div>
