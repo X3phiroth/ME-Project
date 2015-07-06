@@ -1,8 +1,52 @@
+/*
+ * Complete Code in jQuery
+ */
+
+/**
+ * Adding all Event Listeners
+ * 
+ * @returns {None}
+ */
+//window.onload = function() {
+//        document.getElementById('create').name.addEventListener('focus', nameCheck);
+//        document.getElementById('create').name.addEventListener('input', nameCheck);
+//        document.getElementById('create').name.addEventListener('blur', nameIsCorrect);
+//        
+//        document.getElementById('create').adress.addEventListener('focus', adressCheck);
+//        document.getElementById('create').adress.addEventListener('input', adressCheck);
+//        document.getElementById('create').adress.addEventListener('blur', adressIsCorrect);
+//        
+//        document.getElementById('create').zip.addEventListener('focus', zipCheck);
+//        document.getElementById('create').zip.addEventListener('input', zipCheck);
+//        document.getElementById('create').zip.addEventListener('blur', zipIsCorrect);
+//        
+//        document.getElementById('create').land.addEventListener('focus', landCheck);
+//        document.getElementById('create').land.addEventListener('keypress', landCheck);
+//        document.getElementById('create').land.addEventListener('blur', landIsCorrect);
+//        
+//        document.getElementById('create').cuisine.addEventListener('focus', cuisineCheck);
+//        document.getElementById('create').cuisine.addEventListener('keypress', cuisineCheck);
+//        document.getElementById('create').cuisine.addEventListener('blur', cuisineIsCorrect);
+//        
+//        document.getElementById('create').addEventListener("submit", function(event) {checkFormular(event);});
+//};
+
+$(document).ready(function() {
+    $("#create [name='name']").on({input: nameCheck, focusin: nameCheck, focusout: nameIsCorrect});
+    $("#create [name='adress']").on({input: adressCheck, focusin: adressCheck, focusout: adressIsCorrect});
+    $("#create [name=zip]").on({input: zipCheck, focusin: zipCheck, focusout: zipIsCorrect});
+    $("#create [name=land]").on({input: landCheck, focusin: landCheck, focusout: landIsCorrect});
+    $("#create [name=cuisine]").on({input: cuisineCheck, focusin: cuisineCheck, focusout: cuisineIsCorrect});
+    $("#create").on("submit", function(event) {checkFormular(event);});
+});
+
 /**
  * 
+ * @param {type} event
  * @returns {Boolean}
  */
-function checkFormular() {
+function checkFormular(event) {
+    event.preventDefault();
     var bol1 = nameIsCorrect();
     var bol2 = adressIsCorrect();
     var bol3 = zipIsCorrect();
@@ -21,8 +65,8 @@ var grey = "#989898";
  * @returns {None}
  */
 function nameCheck() {
-    var inputField = document.getElementById("create").name;
-    var textField = document.getElementById("form_1");
+    var inputField = $("#create [name='name']")[0];
+    var textField = $("#form_1")[0];
 
     if (inputField.value.length < 4) {
         setProps(inputField, orange, textField, grey, "*requires at least 4 characters");
@@ -35,8 +79,8 @@ function nameCheck() {
  * @returns {Boolean}
  */
 function nameIsCorrect() {
-    var inputField = document.getElementById("create").name;
-    var textField = document.getElementById("form_1");
+    var inputField = $("#create [name='name']")[0];
+    var textField = $("#form_1")[0];
     
     if (inputField.value.length < 4) {
         setProps(inputField, red, textField, red, "Must contain at least 4 characters!");
@@ -52,8 +96,8 @@ function nameIsCorrect() {
  * @returns {None}
  */
 function adressCheck() {
-    var inputField = document.getElementById("create").adress;
-    var textField = document.getElementById("form_2");
+    var inputField = $("#create [name='adress']")[0];
+    var textField = $("#form_2")[0];
 
     if (inputField.value.length < 5) {
         setProps(inputField, orange, textField, grey, "*requires at least 5 characters");
@@ -66,8 +110,8 @@ function adressCheck() {
  * @returns {Boolean}
  */
 function adressIsCorrect() {
-    var inputField = document.getElementById("create").adress;
-    var textField = document.getElementById("form_2");
+    var inputField = $("#create [name='adress']")[0];
+    var textField = $("#form_2")[0];
 
     if (inputField.value.length < 5) {
         setProps(inputField, red, textField, red, "Must contain at least 5 characters!");
@@ -83,8 +127,8 @@ function adressIsCorrect() {
  * @returns {None}
  */
 function zipCheck() {
-    var inputField = document.getElementById("create").zip;
-    var textField = document.getElementById("form_3");
+    var inputField = $("#create [name='zip']")[0];
+    var textField = $("#form_3")[0];
     var check = 0;
 
     for (i = 0; i < inputField.value.length; ++i) {
@@ -106,8 +150,8 @@ function zipCheck() {
  * @returns {Boolean}
  */
 function zipIsCorrect() {
-    var inputField = document.getElementById("create").zip;
-    var textField = document.getElementById("form_3");
+    var inputField = $("#create [name='zip']")[0];
+    var textField = $("#form_3")[0];
     var check = 0;
 
     for (i = 0; i < inputField.value.length; ++i) {
@@ -132,8 +176,8 @@ function zipIsCorrect() {
  * @returns {None}
  */
 function landCheck() {
-    var inputField = document.getElementById("create").land;
-    var textField = document.getElementById("form_4");
+    var inputField = $("#create [name='land']")[0];
+    var textField = $("#form_4")[0];
 
     if (inputField.selectedIndex === 0) {
         setProps(inputField, orange, textField, grey, "*select a country");
@@ -146,8 +190,8 @@ function landCheck() {
  * @returns {Boolean}
  */
 function landIsCorrect() {
-    var inputField = document.getElementById("create").land;
-    var textField = document.getElementById("form_4");
+    var inputField = $("#create [name='land']")[0];
+    var textField = $("#form_4")[0];
 
     if (inputField.selectedIndex === 0) {
         setProps(inputField, red, textField, red, "Must select a country!");
@@ -163,8 +207,8 @@ function landIsCorrect() {
  * @returns {None}
  */
 function cuisineCheck() {
-    var inputField = document.getElementById("create").cuisine;
-    var textField = document.getElementById("form_5");
+    var inputField = $("#create [name='cuisine']")[0];
+    var textField = $("#form_5")[0];
 
     if (inputField.selectedIndex === 0) {
         setProps(inputField, orange, textField, grey, "*select a cuisine");
@@ -177,8 +221,8 @@ function cuisineCheck() {
  * @returns {Boolean}
  */
 function cuisineIsCorrect() {
-    var inputField = document.getElementById("create").cuisine;
-    var textField = document.getElementById("form_5");
+    var inputField = $("#create [name='cuisine']")[0];
+    var textField = $("#form_5")[0];
 
     if (inputField.selectedIndex === 0) {
         setProps(inputField, red, textField, red, "Must select a cuisine!");
