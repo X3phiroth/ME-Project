@@ -28,12 +28,12 @@ jQuery.fn.fadeSlideShow = function(options) {
      		height: 480, // default height of the slideshow
 			speed: 'slow', // default animation transition speed
 			interval: 3000, // default interval between image change
-			PlayPauseElement: 'fssPlayPause', // default css id for the play / pause element
+			PlayPauseElement: null, // default css id for the play / pause element
 			PlayText: 'Play', // default play text
 			PauseText: 'Pause', // default pause text
-			NextElement: 'fssNext', // default id for next button
+			NextElement: null, // default id for next button
 			NextElementText: 'Next >', // default text for next button
-			PrevElement: 'fssPrev', // default id for prev button
+			PrevElement: null, // default id for prev button
 			PrevElementText: '< Prev', // default text for prev button
 			ListElement: 'fssList', // default id for image / content controll list
 			ListLi: 'fssLi', // default class for li's in the image / content controll 
