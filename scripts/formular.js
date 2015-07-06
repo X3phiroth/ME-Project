@@ -37,16 +37,14 @@ $(document).ready(function() {
     $("#create [name=zip]").on({input: zipCheck, focusin: zipCheck, focusout: zipIsCorrect});
     $("#create [name=land]").on({input: landCheck, focusin: landCheck, focusout: landIsCorrect});
     $("#create [name=cuisine]").on({input: cuisineCheck, focusin: cuisineCheck, focusout: cuisineIsCorrect});
-    $("#create").on("submit", function(event) {checkFormular(event);});
+//    $("#create").on("submit", function(event) {checkFormular(event);});
 });
 
 /**
  * 
- * @param {type} event
  * @returns {Boolean}
  */
-function checkFormular(event) {
-    event.preventDefault();
+function checkFormular() {
     var bol1 = nameIsCorrect();
     var bol2 = adressIsCorrect();
     var bol3 = zipIsCorrect();
